@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 19286913}
   - component: {fileID: 19286912}
   - component: {fileID: 19286911}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,6 +253,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   rotateSpeed: 75
+  jumpVelocity: 5
+  distanceToGround: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &194256879
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -453,6 +458,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1659438351742063812, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720902708107603472, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142287747254654521, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010553995592352197, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7052576960177576366, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -496,6 +517,14 @@ PrefabInstance:
     - target: {fileID: 7052576960177576366, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088708697089574268, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686556237418117682, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
@@ -609,7 +638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 676328461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +807,7 @@ GameObject:
   - component: {fileID: 765800103}
   - component: {fileID: 765800102}
   - component: {fileID: 765800101}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -873,7 +902,7 @@ GameObject:
   - component: {fileID: 1215216849}
   - component: {fileID: 1215216848}
   - component: {fileID: 1215216847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,6 +1187,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1659438351742063812, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720902708107603472, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142287747254654521, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010553995592352197, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7052576960177576366, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1202,6 +1247,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7088708697089574268, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686556237418117682, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
 --- !u!4 &1535819886 stripped
@@ -1221,7 +1274,7 @@ GameObject:
   - component: {fileID: 1548235590}
   - component: {fileID: 1548235589}
   - component: {fileID: 1548235588}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1369,7 @@ GameObject:
   - component: {fileID: 1656146395}
   - component: {fileID: 1656146394}
   - component: {fileID: 1656146393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1411,6 +1464,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1659438351742063812, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720902708107603472, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142287747254654521, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010553995592352197, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7052576960177576366, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1454,6 +1523,14 @@ PrefabInstance:
     - target: {fileID: 7052576960177576366, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088708697089574268, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686556237418117682, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
@@ -1846,6 +1923,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1659438351742063812, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720902708107603472, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142287747254654521, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010553995592352197, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7052576960177576366, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1889,6 +1982,14 @@ PrefabInstance:
     - target: {fileID: 7052576960177576366, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088708697089574268, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686556237418117682, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1df63b0d4f8681d48a25ff3f9b7b636a, type: 3}
