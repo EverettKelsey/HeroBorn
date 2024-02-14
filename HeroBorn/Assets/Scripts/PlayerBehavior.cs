@@ -18,12 +18,14 @@ public class PlayerBehavior : MonoBehaviour
     private CapsuleCollider _col;
     private bool doJump = false;
     private bool doShoot = false;
+    private GameBehavior _gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _col = GetComponent<CapsuleCollider>();
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameBehavior>();
     }
     // Update is called once per frame
     void Update()
@@ -68,4 +70,12 @@ public class PlayerBehavior : MonoBehaviour
             bool grounded = Physics.CheckCapsule(_col.bounds.center, capsuleBottom, distanceToGround, groundLayer, QueryTriggerInteraction.Ignore);
             return grounded;
         }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Enemy")
+        {
+            _gameManager.HP -= 1;
+        }
+    }
 }
