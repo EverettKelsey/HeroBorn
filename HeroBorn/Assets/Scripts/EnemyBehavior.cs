@@ -27,7 +27,7 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    void onTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.name == "Player")
         {
@@ -35,7 +35,7 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Player detected - attack!");
         }
     }
-    void onTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if(other.name == "Player")
         {

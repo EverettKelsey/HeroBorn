@@ -2,15 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using CustomExtensions;
 
-public class GameBehavior : MonoBehaviour
+public class GameBehavior : MonoBehaviour, IManager
 {
+    private string _state;
+    public string State
+    {
+        get { return _state; }
+        set { _state = value; }
+    }
     public string labelText = "Collect all 4 items and win your freedom!";
     public int maxItems = 4;
     public bool ShowWinScreen = false;
     private int _itemsCollected = 0;
     public bool showLossScreen = false;
 
+    void Start()
+    {
+        Initialize();
+    }
+
+    public void Initialize()
+    {
+        _state = "Manager Initialized..";
+        _state.FancyDebug();
+        Debug.Log(_state);
+    }
     public int Items
     {
         get { return _itemsCollected; }
@@ -52,12 +70,6 @@ public class GameBehavior : MonoBehaviour
         }
     }
 
-    void RestartLevel()
-    {
-        SceneManager.LoadScene(0);
-        Time.timeScale = 1.0f;
-    }
-
     void OnGUI()
     {
         GUI.Box(new Rect(20, 20, 150, 25), "Player Health:" + _playerHP);
@@ -68,7 +80,7 @@ public class GameBehavior : MonoBehaviour
         {
             if (GUI.Button(new Rect(Screen.width/2 - 100, Screen.height/2 -50, 200, 100), "YOU WON!"))
             {
-                RestartLevel();
+                Utilities.RestartLevel(0);
             }
         }
 
@@ -76,7 +88,7 @@ public class GameBehavior : MonoBehaviour
         {
             if(GUI.Button(new Rect(Screen.width / 2 -100, Screen.height / 2 -50, 200, 100), "You lose..."))
             {
-                RestartLevel();
+                Utilities.RestartLevel(0);
             }
         }
     }
