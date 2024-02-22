@@ -29,7 +29,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.name == "Player")
+        if(other.gameObject.name == "Player")
         {
             agent.destination = player.position;
             Debug.Log("Player detected - attack!");
@@ -37,7 +37,7 @@ public class EnemyBehavior : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        if(other.name == "Player")
+        if(other.gameObject.name == "Player")
         {
             Debug.Log("Player out of range, resume patrol");
         }
@@ -53,7 +53,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void InitializePatrolRoute()
     {
-        foreach(Transform child in patrolRoute)
+        foreach (Transform child in patrolRoute)
         {
             locations.Add(child);
         }
@@ -70,7 +70,7 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agent.remainingDistance < 0.2f && agent.pathPending)
+        if (agent.remainingDistance < 0.2f && agent != agent.pathPending)
         {
             MoveToNextPatrolLocation();
         }
