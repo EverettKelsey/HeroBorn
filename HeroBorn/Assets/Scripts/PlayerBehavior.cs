@@ -19,6 +19,8 @@ public class PlayerBehavior : MonoBehaviour
     private bool doJump = false;
     private bool doShoot = false;
     private GameBehavior _gameManager;
+    public delegate void JumpingEvent();
+    public event JumpingEvent playerJump;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +59,8 @@ public class PlayerBehavior : MonoBehaviour
             bulletRB.velocity = this.transform.forward * bulletSpeed;
             doShoot = false;
         }
+
+        playerJump();
 
         Vector3 rotation = Vector3.up * hInput;
         Quaternion angleRot = Quaternion.Euler(rotation * Time.fixedDeltaTime);
